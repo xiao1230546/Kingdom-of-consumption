@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>支付</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/pay_index.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="layermobilev2.0/layer_mobile/layer.js"></script>
+	<script src="js/index.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+<body onload="inspect()">
+	<div id="content" style="display: none" class="payment_bg">
+		<div class="payment">
+			<div id="money" class="money_div qf">
+				<label class="fl">订单金额</label>
+				<div class="">
+					<span id="pay_money_span" class="money_span fr"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!--<div onclick="pay_click(1)" class="payment esec">-->
+			<!--<div class="cash qf">-->
+				<!--<div class="fl cash_img">-->
+				<!--</div>-->
+				<!--<div class="fl cash_text">-->
+					<!--<p>现金账户</p>-->
+					<!--<p class="cash_p2">可用余额：<span id="pay_cash"></span></p>-->
+				<!--</div>-->
+				<!--<div class="fr cash_input">-->
+					<!---->
+					<!--<span class="es_pay" name="现金" id="pay_xj" ></span>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div onclick="pay_click(2)" class="payment esec">
+			<div class="cash qf">
+				<div class="fl cash_img_a">
+				</div>
+				<div class="fl ">
+					<p>微信支付</p>
+				</div>
+				<div  class="fr">
+					<span class="es_pay" name="微信" id="pay_wx" ></span>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div onclick="confirm_pays()" id="confirm_pay" class="cash_qer qf">
+				确认支付
+			</div>
+		</div>
+		<input id="pay_hidden" type="hidden">
+	</div>
+</body>
+
+
+
+
+
+
+<script>
+	$("#pay_hidden").attr("mer",4);
+	$("#pay_wx").addClass("dsyuxe");
+	function pay_xt(one,obj,nbj) {
+		if(one == 1){
+			ser(obj,nbj);
+		}else {
+			ser(obj,nbj);
+		}
+	}
+	
+	function pay_click(es_pay){
+		var pay_hidden = 11;
+		if (es_pay == 1) {
+			pay_hidden =11;
+			pay_xt(1,"#pay_xj","#pay_wx");
+		} else {
+			pay_hidden =4;
+			pay_xt(1,"#pay_wx","#pay_xj");
+		}
+		$("#pay_hidden").attr("mer",pay_hidden);
+		return
+	}
+	
+	function ser(obj,nbj) {
+		$(obj).addClass("dsyuxe");
+		$(obj).removeClass("dsyuxe_no");
+		$(nbj).removeClass("dsyuxe");
+		$(nbj).addClass("dsyuxe_no");
+	};
+</script>
+<script src="js/pay_productdetail.js"></script>
+</html>

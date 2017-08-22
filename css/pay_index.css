@@ -1,0 +1,78 @@
+body{
+    background-color: #f3f3f4;
+}
+.payment_bg{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+.payment{
+    margin-top: 1px;
+    padding:0 15px 0 15px;
+    background-color: #ffffff;
+}
+.money_span{
+    color: #fa2828;
+}
+.money_div{
+    height: 50px;
+    line-height: 50px;
+}
+
+/*//现金*/
+.cash{
+    height: 70px;
+    line-height: 70px;
+    
+}
+.cash_img,.cash_img_a{
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/xianjinpay.png");
+    background-size: 40px 40px;
+    margin-right: 8px;
+}
+.cash_img_a{
+    margin-top: 15px;
+    background: url("../img/weixinpay.png");
+    background-size: 40px 40px;
+}
+.cash_text>.cash_p2{
+    font-size: 14px;
+}
+.cash_text>p{
+    line-height: 1.3em;
+}
+.cash_text{
+    margin-top: 15px;
+}
+.cash_qer{
+    width: 289px;
+    height: 45px;
+    margin: 30px auto;
+    text-align: center;
+    line-height:45px;
+    color:#fff ;
+    background: -webkit-linear-gradient(left, #fa2828 , #fd3f1a); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #fa2828, #fd3f1a); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #fa2828, #fd3f1a); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #fa2828 , #fd3f1a); /* 标准的语法 */
+    font-family: "微软雅黑";
+    border-radius: 25px;
+}
+.es_pay{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../img/weixun.png")no-repeat left center;
+    background-size: 18px 18px;
+}
+.dsyuxe{
+    background: url("../img/xuanzhong.png")no-repeat left center;
+    background-size: 18px 18px;
+}
+.dsyuxe_no{
+    background: url("../img/weixun.png")no-repeat left center;
+    background-size: 18px 18px;
+}
